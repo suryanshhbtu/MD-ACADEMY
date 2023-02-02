@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client';  // importing ReactDOM from library
+import App from './App';    // JS file does not require .js to be added
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));  // root is id of div which is in public/index.html
+root.render(<App />);                                               // what should be rendered inside that root(div) 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+/*
+Component -> Custom HTML Element (React is All About Components)
+          -> break bi chunk of code into multiple smaller functions
+          -> Reusability, Seprations of Concerns (one component focuses on a specific area).
+
+DOM -> Document Object Model.
+    -> API for HTML & XML document.
+    -> Defines the logical structure of documents & 
+       way a document is accessed and manipulated.
+
+
+    
+*/
