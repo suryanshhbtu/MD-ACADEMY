@@ -1,10 +1,10 @@
 import React from 'react';
 
-import img1 from '../../images/1.PNG';
+import img1 from '../../images/dummy-profile.png';
 const StaffCard = (props) => {
 
     return (
-    <div className="card" style={{width: '18rem'}}>
+    <div className="card m-2" style={{width: '18rem'}}>
         <img src={img1} className="card-img-top" alt=""/>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
