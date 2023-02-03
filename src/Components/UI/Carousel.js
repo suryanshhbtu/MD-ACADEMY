@@ -2,10 +2,10 @@ import React from 'react';
 import img1 from '../../images/1.PNG';
 import img2 from '../../images/2.PNG';
 import img3 from '../../images/3.PNG';
-const Carouse = () => {
+const Carousel = () => {
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" className="carousel slide " data-ride="carousel">
             <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -13,13 +13,13 @@ const Carouse = () => {
             </ol>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img className="d-block w-100" src={img1} alt="First slide"/>
+                    <img className="d-block w-100 h-100" src={img1} alt="First slide"/>
                 </div>
                 <div className="carousel-item">
-                    <img className="d-block w-100" src={img2} alt="Second slide"/>
+                    <img className="d-block w-100 h-100" src={img2} alt="Second slide"/>
                 </div>
                 <div className="carousel-item">
-                    <img className="d-block w-100" src={img3} alt="Third slide"/>
+                    <img className="d-block w-100 h-100" src={img3} alt="Third slide"/>
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -33,4 +33,4 @@ const Carouse = () => {
         </div>
     );
 }
-export default Carouse;
+export default Carousel;
