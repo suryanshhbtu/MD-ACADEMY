@@ -1,0 +1,53 @@
+[33mcommit a655ce182261cb7b25ec16fdba9d7d49f4810bdb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Tue Feb 7 17:15:57 2023 +0530
+
+    before notice is added
+
+[33mcommit 3bf971ec964257f381745424e9b2f43720604ff8[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Tue Feb 7 16:56:08 2023 +0530
+
+    added newsOverlay with bootstrap + responsive
+
+[33mcommit b9bc5a794f28ce44c99261ae9d2a7f4e393f704f[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Sun Feb 5 23:56:23 2023 +0530
+
+    loading staff from nodejs rest api
+
+[33mcommit bda20ca0c3099b16ed75eb0908bb3eae521a72e5[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Sat Feb 4 17:11:17 2023 +0530
+
+    added login components
+
+[33mcommit 95a8b2be558108040f125d1ad6fb75def16d600c[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Sat Feb 4 01:48:26 2023 +0530
+
+    add content in pages of achievements, our mission and staff
+
+[33mcommit 2b4cf78ec7e3cc5bc751b2abdd3c805330332078[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Fri Feb 3 19:28:58 2023 +0530
+
+    Added route, staffCard
+
+[33mcommit ba6a019a276c079b5fc6aaee4c2d74d4de4361ff[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Fri Feb 3 02:16:30 2023 +0530
+
+    Divided Main screen into 3 parts News&Event, Carouse and Activity
+
+[33mcommit 33c1c4b38ed18697929bdaed63943cce138ee51a[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Fri Feb 3 00:08:26 2023 +0530
+
+    NavBar Added
+
+[33mcommit b5be81c2b2afee0b23a9705db54e0bb1a89b04ad[m
+Author: harcourtian <suryanshhbtu@gmail.com>
+Date:   Thu Feb 2 22:43:56 2023 +0530
+
+    first commit

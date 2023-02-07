@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NewsOverlay from './NewsOverlay';
+import NewsOverlay from './Overlay';
 
 const CardView = () => {
 

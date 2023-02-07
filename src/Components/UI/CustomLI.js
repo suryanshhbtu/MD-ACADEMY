@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NewsOverlay from './NewsOverlay';
+import NewsOverlay from './Overlay';
 
 const CustomLI = (props) => {
 
@@ -16,7 +16,7 @@ const CustomLI = (props) => {
     return (
         <div type="button" className=" btn btn-secondary " onClick={onClickHandler} data-toggle="modal" data-target="#exampleModalCenter" >
             <li className='p-1'>{props.title}</li>
-            {showOverlay && <NewsOverlay _id={props._id}/>}
+            {showOverlay && <NewsOverlay _id={props._id} genre={props.genre} />}
                     {/* <button type="button" className="btn btn-primary" onClick={onClickHandler} data-toggle="modal" data-target="#exampleModalCenter">
                         Launch demo modal
                     </button> */}

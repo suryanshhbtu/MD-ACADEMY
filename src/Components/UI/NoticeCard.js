@@ -1,27 +1,27 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import CustomLI from './CustomLI';
 
-const NewsCard = () => {
-    const [newsList, setNewsList] = useState([]);
+const NoticeCard = () => {
+    const [noticeList, setnoticeList] = useState([]);
 
     const fetchStaffHandler = useCallback(async () => {
         // setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:3030/news');
-            if (!response.ok) throw new Error('Something Went Wrong in Fetching News');
+            const response = await fetch('http://localhost:3030/notices');
+            if (!response.ok) throw new Error('Something Went Wrong in Fetching notice');
             console.log(response);
             const data = await response.json();
             console.log(data);
-            const loadNews = [];
+            const loadnotice = [];
             data.reverse();
-            for (const a in data) loadNews.push({
+            for (const a in data) loadnotice.push({
                 _id: data[a]._id,
                 title: data[a].title,
             })
-            setNewsList(loadNews);
+            setnoticeList(loadnotice);
         } catch (error) {
             console.log(error);
-            console.log(" News me Ku ch Galat Ho Gya");
+            console.log(" notice me Ku ch Galat Ho Gya");
         }
     }, []);
     useEffect(() => {
@@ -31,14 +31,14 @@ const NewsCard = () => {
     return (
         <div>
             <div className="card text-white bg-secondary mb-1 text-center" >
-                <div className="card-header bg-dark">News And Events</div>
+                <div className="card-header bg-dark">Notice</div>
                 <div className="card-body">
                     {/* <h5 className="card-title"></h5> */}
                     <ul className="card-text list-unstyled">
-                       {/* { console.log(newsList, "Hello" )} */}
-                        {newsList.map((item)=>{
+                       {/* { console.log(noticeList, "Hello" )} */}
+                        {noticeList.map((item)=>{
                             console.log(item);
-                            return(<CustomLI key={item._id} title={item.title} _id={item._id} genre='news'/>)
+                            return(<CustomLI key={item._id} title={item.title} _id={item._id} genre='notices'/>)
                         })}
                     </ul>
                     
@@ -47,4 +47,4 @@ const NewsCard = () => {
         </div>
     );
 }
-export default NewsCard;
+export default NoticeCard;
