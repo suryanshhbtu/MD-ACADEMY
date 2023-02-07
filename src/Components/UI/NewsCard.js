@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import CustomLI from './CustomLI';
-import NewsOverlay from './NewsOverlay';
 
 const NewsCard = () => {
     const [newsList, setNewsList] = useState([]);
@@ -14,6 +13,7 @@ const NewsCard = () => {
             const data = await response.json();
             console.log(data);
             const loadNews = [];
+            data.reverse();
             for (const a in data) loadNews.push({
                 _id: data[a]._id,
                 title: data[a].title,

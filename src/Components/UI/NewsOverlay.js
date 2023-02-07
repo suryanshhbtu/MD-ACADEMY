@@ -27,11 +27,11 @@ const NewsOverlay = (props) => {
 
     
     return (
-        <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div className=" modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered" role="document">
-                <div className="modal-content"  style={{whiteSpace: 'pre-line' }}>
+                <div className="modal-content"  style={{whiteSpace: 'pre-line' }} data-dismiss="modal">
                     <div className="modal-header" >
-                        <h5 className=" text-dark modal-title" id="exampleModalLongTitle"><b>{title}</b></h5>
+                        <h5 className="text-dark modal-title" id="exampleModalLongTitle"><b>{title}</b></h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

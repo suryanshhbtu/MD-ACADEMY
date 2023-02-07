@@ -14,7 +14,7 @@ const CustomLI = (props) => {
     //     setShowOverlay(false);
     // }
     return (
-        <div type="button" className=" btn btn-primary " onClick={onClickHandler} data-toggle="modal" data-target="#exampleModalCenter" >
+        <div type="button" className=" btn btn-secondary " onClick={onClickHandler} data-toggle="modal" data-target="#exampleModalCenter" >
             <li className='p-1'>{props.title}</li>
             {showOverlay && <NewsOverlay _id={props._id}/>}
                     {/* <button type="button" className="btn btn-primary" onClick={onClickHandler} data-toggle="modal" data-target="#exampleModalCenter">
