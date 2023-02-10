@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import NewsViewCard from '../Layout/NewsViewCard';
 import AddNewsForm from './AddNewsForm';
+import NewsViewCard from './NewsViewCard';
 
 const NewsView = () => {
     const [newsList, setNewsList] = useState([]);
@@ -36,14 +36,8 @@ const NewsView = () => {
 
     return (
         <div>
-            <div class="dropdown text-center p-1">
-                <button class="btn btn-secondary btn-lg btn-block" id="dropdownMenuButton" data-toggle="dropdown" >
-                    Add New News And Event
-                </button>
-                <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                    <AddNewsForm />
-                </div>
-            </div>
+
+            <AddNewsForm recallfetchStaffHandler={fetchStaffHandler} />
 
 
             <div className="card text-white bg-secondary mb-1 text-center" >
