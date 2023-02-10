@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NewsViewCard = (props) => {
+const NoticeViewCard = (props) => {
     const onDeleteHandler = async () => {
-        const response = await fetch(`http://localhost:3030/news/${props._id}`, {
+        const response = await fetch(`http://localhost:3030/notices/${props._id}`, {
             method: 'DELETE',
             body: JSON.stringify(),
             headers: {
@@ -11,7 +11,7 @@ const NewsViewCard = (props) => {
         });
         const data = await response.json;
         console.log(data);
-        props.recallfetchNewsHandler();
+        props.recallfetchNoticeHandler();
     }
     return (
         <div className="card text-center mt-2">
@@ -32,4 +32,4 @@ const NewsViewCard = (props) => {
         </div>
     );
 }
-export default NewsViewCard;
+export default NoticeViewCard;

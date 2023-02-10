@@ -21,7 +21,7 @@ const LoggedInMainNavigation = () => {
                         <NavLink className="nav-link" to="/editNewsAndEvents">Edit News And Events</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/editUpcommingEvents">Edit Upcomming Events</NavLink>
+                        <NavLink className="nav-link" to="/editNoticeBoard">Edit Notice Board</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/addImages">Add Images</NavLink>

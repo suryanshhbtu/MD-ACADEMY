@@ -11,10 +11,10 @@ import Staff from './Pages/Staff';
 import LoggedInMainNavigation from './LoginComponent/LoggedInMainNavigation';
 import StaffManager from './LoggedPages/StaffManager';
 import EditNewsAndEvents from './LoggedPages/EditNewsAndEvents';
-import EditUpcommingEvents from './LoggedPages/EditUpcommingEvents';
 import AddImages from './LoggedPages/AddImages';
 import ContactDeveloper from './LoggedPages/ContactDeveloper';
 import LoginHome from './LoggedPages/LoginHome';
+import EditNoticeBoard from './LoggedPages/EditNoticeBoard';
 
 function App() {
   const isLoggedin = true;
@@ -36,8 +36,8 @@ function App() {
             <Route path="/editNewsAndEvents">
               <EditNewsAndEvents />
             </Route>
-            <Route path="/editUpcommingEvents">
-              <EditUpcommingEvents />
+            <Route path="/editNoticeBoard">
+              <EditNoticeBoard />
             </Route>
             <Route path="/addImages">
               <AddImages />

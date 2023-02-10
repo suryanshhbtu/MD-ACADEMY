@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NewsViewCard = (props) => {
+const StaffViewCard = (props) => {
     const onDeleteHandler = async () => {
-        const response = await fetch(`http://localhost:3030/news/${props._id}`, {
+        const response = await fetch(`http://localhost:3030/staffs/${props._id}`, {
             method: 'DELETE',
             body: JSON.stringify(),
             headers: {
@@ -11,7 +11,7 @@ const NewsViewCard = (props) => {
         });
         const data = await response.json;
         console.log(data);
-        props.recallfetchNewsHandler();
+        props.recallfetchStaffHandler();
     }
     return (
         <div className="card text-center mt-2">
@@ -19,17 +19,19 @@ const NewsViewCard = (props) => {
                 ID:  {props._id}
             </div>
             <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-
-                <p className="card-text text-success">{props.notice}</p>
-
-                <p className="card-text text-secondary">{props.msg}</p>
+                <h5 className="card-title"><b>Name : </b>{props.name}</h5>
+                <ul className="card-text list-unstyled">
+                    <li><b>Age : </b>{props.age}</li> 
+                    <li><b>Experience : </b>{props.experience} years</li> 
+                    <li><b>Speciality : </b>{props.speciality}</li> 
+                    <li><b>Message : </b>{props.msg}</li> 
+                </ul>
                 <button href="#" className="btn btn-primary" onClick={onDeleteHandler}>Delete</button>
             </div>
             <div className="card-footer text-muted">
-                2 days ago
+                122 days ago
             </div>
         </div>
     );
 }
-export default NewsViewCard;
+export default StaffViewCard;

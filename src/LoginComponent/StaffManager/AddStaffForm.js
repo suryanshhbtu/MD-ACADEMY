@@ -1,24 +1,26 @@
 import React, { useRef, useState } from 'react';
 
-const AddNewsForm = (props) => {
+const AddStaffForm = (props) => {
 
     const [showForm, setShowForm] = useState(false);
-    const titleRef = useRef();
-    const noticeRef = useRef();
+    const nameRef = useRef();
+    const ageRef = useRef();
+    const experienceRef = useRef();
+    const specialityRef = useRef();
     const msgRef = useRef();
     // const newLabelRef = useRef();
 
 
     const postData = async (news) => {
         
-         await fetch(`http://localhost:3030/news/`, {
+         await fetch(`http://localhost:3030/staffs/`, {
             method: 'POST',
             body: JSON.stringify(news),
             headers: {
                 "Content-Type": "application/json",
             }
         }, 
-        props.recallfetchNewsHandler(),
+        props.recallfetchStaffHandler(),
         closeHandler(),
         console.log("POSTED SUCCESSFULLY"));
     }
@@ -26,12 +28,14 @@ const AddNewsForm = (props) => {
     const onSubmitHandler = (event) => {
         event.preventDefault();
         
-        const news = {
-            title: titleRef.current.value,
-            notice: noticeRef.current.value,
+        const notice = {
+            name: nameRef.current.value,
+            age: ageRef.current.value,
+            experience: experienceRef.current.value,
+            speciality: specialityRef.current.value,
             msg: msgRef.current.value
         }
-        postData(news);
+        postData(notice);
         
     }
 
@@ -41,12 +45,12 @@ const AddNewsForm = (props) => {
     }
     const closeHandler = ()=>{
         setShowForm(false);
-        props.recallfetchNewsHandler();
+        props.recallfetchStaffHandler();
     }
     return (<div>
         <div className="dropdown text-center p-1">
         <button className="btn btn-secondary btn-lg btn-block"  onClick={addHandler} >
-                Add New News And Event
+                Add New Notice
             </button>
 
             {showForm &&
@@ -54,13 +58,27 @@ const AddNewsForm = (props) => {
                 <form className="w-100 p-5" onSubmit={onSubmitHandler}>
                     <div className="form-row">
                         <div className="form-group col-md-12 ">
-                            <label >Title</label>
-                            <input type="text" className="form-control" id="inputEmail4" placeholder="Title" ref={titleRef} />
+                            <label >Name</label>
+                            <input type="text" className="form-control" id="inputEmail4" placeholder="Name" ref={nameRef} />
                         </div>
                     </div>
-                    <div className="form-group">
-                        <label>Notice</label>
-                        <input type="text" className="form-control" id="inputAddress" placeholder="Key Point" ref={noticeRef} />
+                    <div className="form-row">
+                        <div className="form-group col-md-12 ">
+                            <label >Age</label>
+                            <input type="text" className="form-control" id="inputEmail4" placeholder="Age (in Years)" ref={ageRef} />
+                        </div>
+                    </div>
+                    <div className="form-row">
+                        <div className="form-group col-md-12 ">
+                            <label >Experience</label>
+                            <input type="text" className="form-control" id="inputEmail4" placeholder="Experience (in Years)" ref={experienceRef} />
+                        </div>
+                    </div>
+                    <div className="form-row">
+                        <div className="form-group col-md-12 ">
+                            <label >Speciality</label>
+                            <input type="text" className="form-control" id="inputEmail4" placeholder="Speciality" ref={specialityRef} />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label>Message</label>
@@ -83,6 +101,6 @@ const AddNewsForm = (props) => {
 
     </div>);
 }
-export default AddNewsForm;
+export default AddStaffForm;
 
 

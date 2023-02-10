@@ -1,43 +1,43 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import AddNewsForm from './AddNewsForm';
-import NewsViewCard from './NewsViewCard';
+import AddNoticeForm from './AddNoticeForm';
+import NoticeViewCard from './NoticeViewCard';
 
-const NewsView = () => {
+const NoticeView = () => {
     const [newsList, setNewsList] = useState([]);
 
 
-    const fetchNewsHandler = useCallback(async () => {
+    const fetchNoticeHandler = useCallback(async () => {
         // setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:3030/news');
+            const response = await fetch('http://localhost:3030/notices');
             if (!response.ok) throw new Error('Something Went Wrong in Fetching News');
             console.log(response);
             const data = await response.json();
             console.log(data);
-            const loadNews = [];
+            const loadNotices = [];
             data.reverse();
-            for (const a in data) loadNews.push({
+            for (const a in data) loadNotices.push({
                 _id: data[a]._id,
                 title: data[a].title,
-                notice: data[a].notice,
                 msg: data[a].msg,
+                by: data[a].by,
             })
-            setNewsList(loadNews);
+            setNewsList(loadNotices);
         } catch (error) {
             console.log(error);
-            console.log(" News me Ku ch Galat Ho Gya");
+            console.log(" Notice me Ku ch Galat Ho Gya");
         }
     }, []);
     useEffect(() => {
-        fetchNewsHandler();
-    }, [fetchNewsHandler]);
+        fetchNoticeHandler();
+    }, [fetchNoticeHandler]);
 
 
 
     return (
         <div>
 
-            <AddNewsForm recallfetchNewsHandler={fetchNewsHandler} />
+            <AddNoticeForm recallfetchNoticeHandler={fetchNoticeHandler} />
 
 
             <div className="card text-white bg-secondary mb-1 text-center" >
@@ -48,7 +48,7 @@ const NewsView = () => {
                         {/* { console.log(newsList, "Hello" )} */}
                         {newsList.map((item) => {
                             console.log(item);
-                            return (<NewsViewCard recallfetchNewsHandler={fetchNewsHandler} key={item._id} _id={item._id} title={item.title} notice={item.notice} msg={item.msg} />)
+                            return (<NoticeViewCard recallfetchNoticeHandler={fetchNoticeHandler} key={item._id} _id={item._id} title={item.title} notice={item.notice} msg={item.msg} />)
                         })}
                     </ul>
 
@@ -57,4 +57,4 @@ const NewsView = () => {
         </div>
     );
 }
-export default NewsView;
+export default NoticeView;
