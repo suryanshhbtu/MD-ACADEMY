@@ -7,6 +7,7 @@ const NoticeViewCard = (props) => {
             body: JSON.stringify(),
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJhZG1pbklkIjoiNjNlNzRlMWY3MzViYzFkNzc0NTQ5YTkyIiwiaWF0IjoxNjc2MTQ2NzIzLCJleHAiOjE2NzYxNTAzMjN9.IriZAedett6-WVki1sl7SPEh7UpVYgmq04fcERbXT1A"
             }
         });
         const data = await response.json;
@@ -24,6 +25,7 @@ const NoticeViewCard = (props) => {
                 <p className="card-text text-success">{props.notice}</p>
 
                 <p className="card-text text-secondary">{props.msg}</p>
+                <p className="card-text text-secondary">-{props.by}</p>
                 <button href="#" className="btn btn-primary" onClick={onDeleteHandler}>Delete</button>
             </div>
             <div className="card-footer text-muted">

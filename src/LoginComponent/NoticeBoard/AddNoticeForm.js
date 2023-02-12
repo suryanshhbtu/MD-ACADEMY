@@ -16,6 +16,7 @@ const AddNoticeForm = (props) => {
             body: JSON.stringify(news),
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJhZG1pbklkIjoiNjNlNzRlMWY3MzViYzFkNzc0NTQ5YTkyIiwiaWF0IjoxNjc2MTQ2NzIzLCJleHAiOjE2NzYxNTAzMjN9.IriZAedett6-WVki1sl7SPEh7UpVYgmq04fcERbXT1A"
             }
         }, 
         props.recallfetchNoticeHandler(),

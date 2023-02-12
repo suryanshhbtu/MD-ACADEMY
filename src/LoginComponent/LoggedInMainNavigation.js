@@ -29,6 +29,7 @@ const LoggedInMainNavigation = () => {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contactDeveloper">Contact Developer</NavLink>
                     </li>
+                    
                 </ul>
             </div>
         </nav>

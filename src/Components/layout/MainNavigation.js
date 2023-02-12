@@ -31,7 +31,7 @@ const MainNavigation = () => {
                     </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Admissions
+                            Admissions
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a className="dropdown-item" href="/">Kindergarten</a>
@@ -41,6 +41,9 @@ const MainNavigation = () => {
                         </div>
                     </li>
                 </ul>
+                <li className="nav-item mr-0">
+                        <NavLink className="nav-link" to="/login_signup">Login</NavLink>
+                    </li>
             </div>
         </nav>
     );

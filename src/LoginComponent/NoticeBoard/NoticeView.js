@@ -48,7 +48,7 @@ const NoticeView = () => {
                         {/* { console.log(newsList, "Hello" )} */}
                         {newsList.map((item) => {
                             console.log(item);
-                            return (<NoticeViewCard recallfetchNoticeHandler={fetchNoticeHandler} key={item._id} _id={item._id} title={item.title} notice={item.notice} msg={item.msg} />)
+                            return (<NoticeViewCard recallfetchNoticeHandler={fetchNoticeHandler} key={item._id} _id={item._id} title={item.title} notice={item.notice} msg={item.msg} by={item.by} />)
                         })}
                     </ul>
 
